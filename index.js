@@ -33,10 +33,26 @@ client.on("ready", () => {
 client.on("message", (msg) => {
   console.log(`📩 Pesan dari ${msg.from}: ${msg.body}`);
 
-  if (msg.body.toLowerCase() === "halo") {
-    msg.reply("Halo! Ada yang bisa saya bantu? 😊");
-  } else if (msg.body.toLowerCase().includes("harga")) {
-    msg.reply("Silakan cek harga produk kami di website: https://example.com");
+  const pesan = msg.body.toLowerCase(); // Ubah ke huruf kecil biar case-insensitive
+
+  if (pesan === "Доброе утро коть❤") {
+    msg.reply("Доброе утро ❤");
+  } else if (pesan.includes("iyan")) {
+    msg.reply("uy knp?");
+  } else if (pesan.includes("P")) {
+    msg.reply("uy knp?");
+  } else if (pesan === "p") {
+    msg.reply("Iya apa? ");
+  } else if (pesan === "assalamualaikum") {
+    msg.reply("Waalaikumsalam");
+  } else if (pesan === "Доброе утро ❤") {
+    msg.reply("Доброе утро ❤");
+  } else if (pesan === "Ты как коть?") {
+    msg.reply("Намана,Ты как?");
+  } else if (pesan === "Ничего") {
+    msg.reply("Aaaa okay");
+  } else {
+    msg.reply("I'm sorry, i am not understand! please ask me again 🤖");
   }
 });
 
